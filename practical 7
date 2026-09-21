@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College FAQ</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .faq {
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .question {
+            width: 100%;
+            padding: 18px;
+            border: none;
+            background: #e9eef5;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .question:hover {
+            background: #dce5f0;
+        }
+
+        .answer {
+            display: none;
+            padding: 18px;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        .answer.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="faq-container">
+        <h1>College Department FAQ</h1>
+
+        <div class="faq">
+            <button class="question">What are the department office hours?</button>
+            <div class="answer">
+                The department office is open Monday to Friday, from 9:00 AM to 5:00 PM.
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="question">How can I contact my faculty advisor?</button>
+            <div class="answer">
+                You can contact your faculty advisor through the college email system
+                or visit the department office during office hours.
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="question">Where can I find the course timetable?</button>
+            <div class="answer">
+                The latest course timetable is available on the department notice
+                board and the college student portal.
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="question">How do I submit an assignment?</button>
+            <div class="answer">
+                Assignments should be submitted through the college's online learning
+                portal before the deadline specified by your instructor.
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="question">Who should I contact for technical problems?</button>
+            <div class="answer">
+                For technical issues, contact the college IT support team or visit
+                the IT help desk.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Select all FAQ question buttons
+        const questions = document.querySelectorAll(".question");
+
+        // Add a click event listener to every question
+        questions.forEach(function(question) {
+
+            question.addEventListener("click", function() {
+
+                // Find the answer belonging to this question
+                const answer = question.nextElementSibling;
+
+                // Toggle the answer's visibility
+                answer.classList.toggle("show");
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
